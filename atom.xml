@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小小世界</title>
   
-  <subtitle>前端开发</subtitle>
+  <subtitle>web前端开发</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -116,9 +116,9 @@
     </summary>
     
     
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
-    
       <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
     
   </entry>
   
