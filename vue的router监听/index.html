@@ -68,10 +68,12 @@
 
 
 
-  <meta name="keywords" content="JQuery,attr,prop," />
+  <meta name="keywords" content="vue,router," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="小小世界" type="application/atom+xml" />
@@ -81,18 +83,18 @@
 
 
 
-<meta name="description" content="jquery中attr和prop的区别在高版本的jquery引入prop方法后，什么时候该用prop？什么时候用attr？它们两个之间有什么区别？这些问题就出现了。 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。 举几个例子就知道了。 1&amp;lt;a href=&quot;http://www.baidu.com&quot; t">
-<meta name="keywords" content="JQuery,attr,prop">
+<meta name="description" content="有时候我们需要监听路由，做出某种操作。。 ##下面是个简单的例子 ##1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt;//添加到页面    &amp;lt;/div&amp;gt;&amp;lt;/tem">
+<meta name="keywords" content="vue,router">
 <meta property="og:type" content="article">
-<meta property="og:title" content="attr prop 区别">
-<meta property="og:url" content="http://yoursite.com/attrAndProp/index.html">
+<meta property="og:title" content="vue中监听router变化">
+<meta property="og:url" content="http://yoursite.com/vue的router监听/index.html">
 <meta property="og:site_name" content="小小世界">
-<meta property="og:description" content="jquery中attr和prop的区别在高版本的jquery引入prop方法后，什么时候该用prop？什么时候用attr？它们两个之间有什么区别？这些问题就出现了。 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。 举几个例子就知道了。 1&amp;lt;a href=&quot;http://www.baidu.com&quot; t">
+<meta property="og:description" content="有时候我们需要监听路由，做出某种操作。。 ##下面是个简单的例子 ##1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt;//添加到页面    &amp;lt;/div&amp;gt;&amp;lt;/tem">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-21T08:10:56.314Z">
+<meta property="og:updated_time" content="2018-05-21T08:44:20.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="attr prop 区别">
-<meta name="twitter:description" content="jquery中attr和prop的区别在高版本的jquery引入prop方法后，什么时候该用prop？什么时候用attr？它们两个之间有什么区别？这些问题就出现了。 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。 举几个例子就知道了。 1&amp;lt;a href=&quot;http://www.baidu.com&quot; t">
+<meta name="twitter:title" content="vue中监听router变化">
+<meta name="twitter:description" content="有时候我们需要监听路由，做出某种操作。。 ##下面是个简单的例子 ##1234567891011121314151617181920212223242526&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;span&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/span&amp;gt;//添加到页面    &amp;lt;/div&amp;gt;&amp;lt;/tem">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/attrAndProp/"/>
+  <link rel="canonical" href="http://yoursite.com/vue的router监听/"/>
 
 
 
 
 
-  <title>attr prop 区别 | 小小世界</title>
+  <title>vue中监听router变化 | 小小世界</title>
   
 
 
@@ -235,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/attrAndProp/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vue的router监听/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyw">
@@ -252,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">attr prop 区别</h1>
+          <h1 class="post-title" itemprop="name headline">vue中监听router变化</h1>
         
 
         <div class="post-meta">
@@ -264,8 +266,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T09:58:40+08:00">
-                2017-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T17:30:46+08:00">
+                2017-03-10
               </time>
             
 
@@ -333,19 +335,11 @@
       
 
       
-        <h1 id="jquery中attr和prop的区别"><a href="#jquery中attr和prop的区别" class="headerlink" title="jquery中attr和prop的区别"></a>jquery中attr和prop的区别</h1><p>在高版本的jquery引入prop方法后，什么时候该用prop？什么时候用attr？它们两个之间有什么区别？这些问题就出现了。</p>
-<p>对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。<br>对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。</p>
-<p>举几个例子就知道了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"http://www.baidu.com"</span> target=<span class="string">"_self"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"btn"</span>&gt;百度&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure>
-<p> 这个例子里<code>&lt;a&gt;</code>元素的DOM属性有“<code>href、target</code>和<code>class</code>“，这些属性就是<code>&lt;a&gt;</code>元素本身就带有的属性，也是W3C标准里就包含有这几个属性，或者说在IDE里能够智能提示出的属性，这些就叫做固有属性。处理这些属性时，建议使用<code>prop</code>方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"#"</span> id=<span class="string">"link1"</span> action=<span class="string">"delete"</span>&gt;删除&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这个例子里<code>&lt;a&gt;</code>元素的DOM属性有“<code>href、id</code>和<code>action</code>”，很明显，前两个是固有属性，而后面一个“<code>action</code>”属性是我们自己自定义上去的，<code>&lt;a&gt;</code>元素本身是没有这个属性的。这种就是自定义的DOM属性。处理这些属性时，建议使用<code>attr</code>方法。使用<code>prop</code>方法取值和设置属性值时，都会返回<code>undefined</code>值。</p>
-<p>再举一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input id=<span class="string">"chk1"</span> type=<span class="string">"checkbox"</span> /&gt; <span class="comment">//是否可见</span></span><br><span class="line">&lt;input id=<span class="string">"chk2"</span> type=<span class="string">"checkbox"</span> checked=<span class="string">"checked"</span> /&gt; <span class="comment">//是否可见</span></span><br></pre></td></tr></table></figure>
-<p>像<code>checkbox，radio</code>和<code>select</code>这样的元素，选中属性对应“<code>checked</code>”和“<code>selected</code>”，这些也属于固有属性，因此需要使用<code>prop</code>方法去操作才能获得正确的结果。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#chk1"</span>).prop(<span class="string">"checked"</span>) == <span class="literal">false</span></span><br><span class="line">$(<span class="string">"#chk2"</span>).prop(<span class="string">"checked"</span>) == <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>如果上面使用<code>attr</code>方法，则会出现：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#chk1"</span>).attr(<span class="string">"checked"</span>) == <span class="literal">undefined</span></span><br><span class="line">$(<span class="string">"#chk2"</span>).attr(<span class="string">"checked"</span>) == <span class="string">"checked"</span></span><br></pre></td></tr></table></figure>
+        <p>有时候我们需要监听路由，做出某种操作。。</p>
+<p>##<br>下面是个简单的例子</p>
+<p>##<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><span class="template-variable">&#123;&#123;msg&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>//添加到页面</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">export default&#123;</span></span><br><span class="line"><span class="xml">    data()&#123;</span></span><br><span class="line"><span class="xml">        return &#123;</span></span><br><span class="line"><span class="xml">            msg:""</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;,</span></span><br><span class="line"><span class="xml">    mounted()&#123;</span></span><br><span class="line"><span class="xml">        this.get()</span></span><br><span class="line"><span class="xml">    &#125;,</span></span><br><span class="line"><span class="xml">    methods:&#123;</span></span><br><span class="line"><span class="xml">        get()&#123;</span></span><br><span class="line"><span class="xml">            this.msg=this.$router.history.current.name</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;,</span></span><br><span class="line"><span class="xml">    watch:&#123;</span></span><br><span class="line"><span class="xml">        $route:"get" //监听router变化 并立即改变data数据</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">//其中this.$router.history.current是当前路由 下面的参数根据需要变化</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>还有其他封装方法 不一一列出了~</p>
+
       
     </div>
     
@@ -362,11 +356,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JQuery/" rel="tag"># JQuery</a>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
-            <a href="/tags/attr/" rel="tag"># attr</a>
-          
-            <a href="/tags/prop/" rel="tag"># prop</a>
+            <a href="/tags/router/" rel="tag"># router</a>
           
         </div>
       
@@ -379,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ES6-Modules/" rel="next" title="ES6 Modules">
-                <i class="fa fa-chevron-left"></i> ES6 Modules
+              <a href="/attrAndProp/" rel="next" title="attr prop 区别">
+                <i class="fa fa-chevron-left"></i> attr prop 区别
               </a>
             
           </div>
@@ -388,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/vue的router监听/" rel="prev" title="vue中监听router变化">
-                vue中监听router变化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -443,17 +431,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -511,22 +490,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jquery中attr和prop的区别"><span class="nav-number">1.</span> <span class="nav-text">jquery中attr和prop的区别</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
