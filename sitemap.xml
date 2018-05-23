@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/</loc>
+    
+    <lastmod>2018-05-23T02:04:24.714Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/webpack%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2018-05-22T05:16:22.239Z</lastmod>
