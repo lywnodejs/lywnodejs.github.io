@@ -5,9 +5,9 @@
   <subtitle>web前端开发</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="writebugs.cn/"/>
   <updated>2018-05-22T05:16:22.239Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>writebugs.cn/</id>
   
   <author>
     <name>lyw</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>webpack配置</title>
-    <link href="http://yoursite.com/webpack%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/webpack配置/</id>
+    <link href="writebugs.cn/webpack%E9%85%8D%E7%BD%AE/"/>
+    <id>writebugs.cn/webpack配置/</id>
     <published>2017-04-20T09:30:46.000Z</published>
     <updated>2018-05-22T05:16:22.239Z</updated>
     
@@ -36,16 +36,16 @@
     </summary>
     
     
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+      <category term="webpack" scheme="writebugs.cn/tags/webpack/"/>
     
-      <category term="前端模块化开发" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+      <category term="前端模块化开发" scheme="writebugs.cn/tags/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>vue中的路由懒加载</title>
-    <link href="http://yoursite.com/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
-    <id>http://yoursite.com/vue的路由懒加载/</id>
+    <link href="writebugs.cn/vue%E7%9A%84%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
+    <id>writebugs.cn/vue的路由懒加载/</id>
     <published>2017-03-15T09:30:46.000Z</published>
     <updated>2018-05-23T02:04:24.714Z</updated>
     
@@ -62,14 +62,14 @@
     </summary>
     
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+      <category term="vue" scheme="writebugs.cn/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>vue中监听router变化</title>
-    <link href="http://yoursite.com/vue%E7%9A%84router%E7%9B%91%E5%90%AC/"/>
-    <id>http://yoursite.com/vue的router监听/</id>
+    <link href="writebugs.cn/vue%E7%9A%84router%E7%9B%91%E5%90%AC/"/>
+    <id>writebugs.cn/vue的router监听/</id>
     <published>2017-03-10T09:30:46.000Z</published>
     <updated>2018-05-21T08:44:20.955Z</updated>
     
@@ -87,16 +87,16 @@
     </summary>
     
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+      <category term="vue" scheme="writebugs.cn/tags/vue/"/>
     
-      <category term="router" scheme="http://yoursite.com/tags/router/"/>
+      <category term="router" scheme="writebugs.cn/tags/router/"/>
     
   </entry>
   
   <entry>
     <title>attr prop 区别</title>
-    <link href="http://yoursite.com/attrAndProp/"/>
-    <id>http://yoursite.com/attrAndProp/</id>
+    <link href="writebugs.cn/attrAndProp/"/>
+    <id>writebugs.cn/attrAndProp/</id>
     <published>2017-02-27T01:58:40.000Z</published>
     <updated>2018-05-21T08:10:56.314Z</updated>
     
@@ -112,18 +112,18 @@
     </summary>
     
     
-      <category term="JQuery" scheme="http://yoursite.com/tags/JQuery/"/>
+      <category term="JQuery" scheme="writebugs.cn/tags/JQuery/"/>
     
-      <category term="attr" scheme="http://yoursite.com/tags/attr/"/>
+      <category term="attr" scheme="writebugs.cn/tags/attr/"/>
     
-      <category term="prop" scheme="http://yoursite.com/tags/prop/"/>
+      <category term="prop" scheme="writebugs.cn/tags/prop/"/>
     
   </entry>
   
   <entry>
     <title>ES6 Modules</title>
-    <link href="http://yoursite.com/ES6-Modules/"/>
-    <id>http://yoursite.com/ES6-Modules/</id>
+    <link href="writebugs.cn/ES6-Modules/"/>
+    <id>writebugs.cn/ES6-Modules/</id>
     <published>2017-02-11T10:45:12.000Z</published>
     <updated>2018-05-02T09:36:41.644Z</updated>
     
@@ -143,14 +143,14 @@
     </summary>
     
     
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+      <category term="ES6" scheme="writebugs.cn/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>ES6 Array扩展</title>
-    <link href="http://yoursite.com/es6%E6%96%B0%E5%A2%9Earray/"/>
-    <id>http://yoursite.com/es6新增array/</id>
+    <link href="writebugs.cn/es6%E6%96%B0%E5%A2%9Earray/"/>
+    <id>writebugs.cn/es6新增array/</id>
     <published>2017-02-10T13:16:21.000Z</published>
     <updated>2018-05-02T09:36:41.837Z</updated>
     
@@ -166,16 +166,16 @@
     </summary>
     
     
-      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+      <category term="ES6" scheme="writebugs.cn/tags/ES6/"/>
     
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+      <category term="Array" scheme="writebugs.cn/tags/Array/"/>
     
   </entry>
   
   <entry>
     <title>CommonJS规范</title>
-    <link href="http://yoursite.com/CommonJS%E8%A7%84%E8%8C%83/"/>
-    <id>http://yoursite.com/CommonJS规范/</id>
+    <link href="writebugs.cn/CommonJS%E8%A7%84%E8%8C%83/"/>
+    <id>writebugs.cn/CommonJS规范/</id>
     <published>2017-01-28T08:36:31.000Z</published>
     <updated>2018-05-02T09:36:41.519Z</updated>
     
@@ -191,16 +191,16 @@
     </summary>
     
     
-      <category term="CommonJS" scheme="http://yoursite.com/tags/CommonJS/"/>
+      <category term="CommonJS" scheme="writebugs.cn/tags/CommonJS/"/>
     
-      <category term="规范" scheme="http://yoursite.com/tags/%E8%A7%84%E8%8C%83/"/>
+      <category term="规范" scheme="writebugs.cn/tags/%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
   <entry>
     <title>Ajax</title>
-    <link href="http://yoursite.com/Ajax/"/>
-    <id>http://yoursite.com/Ajax/</id>
+    <link href="writebugs.cn/Ajax/"/>
+    <id>writebugs.cn/Ajax/</id>
     <published>2017-01-20T09:30:46.000Z</published>
     <updated>2018-05-02T09:36:36.257Z</updated>
     
@@ -217,14 +217,14 @@
     </summary>
     
     
-      <category term="Ajax" scheme="http://yoursite.com/tags/Ajax/"/>
+      <category term="Ajax" scheme="writebugs.cn/tags/Ajax/"/>
     
   </entry>
   
   <entry>
     <title>class 类--初识</title>
-    <link href="http://yoursite.com/Class-%E7%B1%BB-%E5%88%9D%E8%AF%86/"/>
-    <id>http://yoursite.com/Class-类-初识/</id>
+    <link href="writebugs.cn/Class-%E7%B1%BB-%E5%88%9D%E8%AF%86/"/>
+    <id>writebugs.cn/Class-类-初识/</id>
     <published>2017-01-17T07:37:03.000Z</published>
     <updated>2018-05-21T08:10:38.228Z</updated>
     
@@ -242,16 +242,16 @@
     </summary>
     
     
-      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+      <category term="ES6" scheme="writebugs.cn/tags/ES6/"/>
     
-      <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+      <category term="面向对象" scheme="writebugs.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>Array方法</title>
-    <link href="http://yoursite.com/Array%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/Array方法/</id>
+    <link href="writebugs.cn/Array%E6%96%B9%E6%B3%95/"/>
+    <id>writebugs.cn/Array方法/</id>
     <published>2017-01-12T12:06:19.000Z</published>
     <updated>2018-05-02T09:36:38.947Z</updated>
     
@@ -267,7 +267,7 @@
     </summary>
     
     
-      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+      <category term="Array" scheme="writebugs.cn/tags/Array/"/>
     
   </entry>
   
