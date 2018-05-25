@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Array,ES6," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小小世界" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="find : 1234567let arr=[1,2,234,&apos;sdf&apos;,-2];arr.find(function(x)&amp;#123;    return x&amp;lt;=2;&amp;#125;)//结果：1，返回第一个符合条件的x值arr.find(function(x,i,arr)&amp;#123;    if(x&amp;lt;2)&amp;#123;console.log(x,i,arr)&amp;#125;&amp;#125;)//">
+<meta name="keywords" content="Array,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 Array扩展">
+<meta property="og:url" content="writebugs.cn/es6新增array/index.html">
+<meta property="og:site_name" content="小小世界">
+<meta property="og:description" content="find : 1234567let arr=[1,2,234,&apos;sdf&apos;,-2];arr.find(function(x)&amp;#123;    return x&amp;lt;=2;&amp;#125;)//结果：1，返回第一个符合条件的x值arr.find(function(x,i,arr)&amp;#123;    if(x&amp;lt;2)&amp;#123;console.log(x,i,arr)&amp;#125;&amp;#125;)//">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-02T09:36:41.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6 Array扩展">
+<meta name="twitter:description" content="find : 1234567let arr=[1,2,234,&apos;sdf&apos;,-2];arr.find(function(x)&amp;#123;    return x&amp;lt;=2;&amp;#125;)//结果：1，返回第一个符合条件的x值arr.find(function(x,i,arr)&amp;#123;    if(x&amp;lt;2)&amp;#123;console.log(x,i,arr)&amp;#125;&amp;#125;)//">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="writebugs.cn/es6新增array/"/>
+
+
+
+
+
+  <title>ES6 Array扩展 | 小小世界</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小小世界</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">web前端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="writebugs.cn/es6新增array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lyw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小世界">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ES6 Array扩展</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-10T21:16:21+08:00">
+                2017-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong><em> find : </em></strong><br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">234</span>,<span class="string">'sdf'</span>,<span class="number">-2</span>];</span><br><span class="line">arr.<span class="built_in">find</span>(<span class="function"><span class="keyword">function</span><span class="params">(x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;=<span class="number">2</span>;</span><br><span class="line">&#125;)//结果：<span class="number">1</span>，返回第一个符合条件的x值</span><br><span class="line">arr.<span class="built_in">find</span>(<span class="function"><span class="keyword">function</span><span class="params">(x,i,arr)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">2</span>)&#123;console.<span class="built_in">log</span>(x,i,arr)&#125;</span><br><span class="line">&#125;)//结果：<span class="number">1</span> <span class="number">0</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">234</span>, <span class="string">"sdf"</span>, <span class="number">-2</span>]，<span class="number">-2</span> <span class="number">4</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">234</span>, <span class="string">"sdf"</span>, <span class="number">-2</span>]</span><br></pre></td></tr></table></figure></p>
+<p>find的参数为回调函数，回调函数可以接收3个参数，值x、索引i、数组arr，回调函数默认返回值x。<br><strong><em> findIndex :</em></strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">234</span>,<span class="string">'sdf'</span>,<span class="number">-2</span>];</span><br><span class="line">arr.findIndex(<span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;=<span class="number">2</span>;</span><br><span class="line">&#125;)<span class="comment">//结果：0，返回第一个符合条件的x值的索引</span></span><br><span class="line">arr.findIndex(<span class="function"><span class="keyword">function</span>(<span class="params">x,i,arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">2</span>)&#123;<span class="built_in">console</span>.log(x,i,arr)&#125;</span><br><span class="line">&#125;)<span class="comment">//结果：1 0 [1, 2, 234, "sdf", -2]，-2 4 [1, 2, 234, "sdf", -2]</span></span><br></pre></td></tr></table></figure></p>
+<p>findIndex和find差不多，不过默认返回的是索引。</p>
+<p><strong><em> includes :</em></strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">234</span>,'sdf',<span class="number">-2</span>];</span><br><span class="line">arr.includes(<span class="number">2</span>);<span class="comment">// 结果true，返回布尔值</span></span><br><span class="line">arr.includes(<span class="number">20</span>);<span class="comment">// 结果：false，返回布尔值</span></span><br><span class="line">arr.includes(<span class="number">2</span>,<span class="number">3</span>)<span class="comment">//结果：false，返回布尔值</span></span><br></pre></td></tr></table></figure></p>
+<p>includes函数与string的includes一样，接收2参数，查询的项以及查询起始位置。</p>
+<p><strong><em> keys :</em></strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">234</span>,<span class="string">'sdf'</span>,<span class="number">-2</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> a <span class="keyword">of</span> arr.keys())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;<span class="comment">//结果：0,1,2,3,4  遍历了数组arr的索引</span></span><br></pre></td></tr></table></figure></p>
+<p>keys，对数组索引的遍历</p>
+<p><strong><em> values :</em></strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">234</span>,<span class="string">'sdf'</span>,<span class="number">-2</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> a <span class="keyword">of</span> arr.values())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;<span class="comment">//结果：1,2,234,sdf,-2 遍历了数组arr的值</span></span><br></pre></td></tr></table></figure></p>
+<p>values，对数组项的遍历</p>
+<p><strong><em> entries :</em></strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[<span class="string">'w'</span>,<span class="string">'b'</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> a <span class="keyword">of</span> arr.entries())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;<span class="comment">//结果：[0,w],[1,b]</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [i,v] <span class="keyword">of</span> arr.entries())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i,v)</span><br><span class="line">&#125;<span class="comment">//结果：0 w,1 b</span></span><br></pre></td></tr></table></figure></p>
+<p>entries，对数组键值对的遍历。</p>
+<p><strong><em> fill :</em></strong><br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr=[<span class="string">'w'</span>,<span class="string">'b'</span>];</span><br><span class="line">arr.fill(<span class="string">'i'</span>)//结果：[<span class="string">'i'</span>,<span class="string">'i'</span>]，改变原数组</span><br><span class="line">arr.fill(<span class="string">'o'</span>,<span class="number">1</span>)//结果：[<span class="string">'i'</span>,<span class="string">'o'</span>]改变原数组,第二个参数表示填充起始位置</span><br><span class="line">new <span class="symbol">Array</span>(<span class="number">3</span>).fill(<span class="string">'k'</span>).fill(<span class="string">'r'</span>,<span class="number">1</span>,<span class="number">2</span>)//结果：[<span class="string">'k'</span>,<span class="string">'r'</span>,<span class="string">'k'</span>]，第三个数组表示填充的结束位置</span><br></pre></td></tr></table></figure></p>
+<p>fill方法改变原数组，当第三个参数大于数组长度时候，以最后一位为结束位置。</p>
+<p><strong><em> Array.of() :</em></strong><br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Array</span>.<span class="keyword">of</span>(<span class="string">'w'</span>,<span class="string">'i'</span>,<span class="string">'r'</span>)//[<span class="string">"w"</span>, <span class="string">"i"</span>, <span class="string">"r"</span>]返回数组</span><br><span class="line"><span class="keyword">Array</span>.<span class="keyword">of</span>([<span class="string">'w'</span>,<span class="string">'o'</span>])//[[<span class="string">'w'</span>,<span class="string">'o'</span>]]返回嵌套数组</span><br><span class="line"><span class="keyword">Array</span>.<span class="keyword">of</span>(undefined)//[undefined]依然返回数组</span><br><span class="line"><span class="keyword">Array</span>.<span class="keyword">of</span>()//[]返回一个空数组</span><br></pre></td></tr></table></figure></p>
+<p>Array.of()方法永远返回一个数组，参数不分类型，只分数量，数量为0返回空数组。</p>
+<p><strong><em> copyWithin :</em></strong><br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">"w"</span>, <span class="string">"i"</span>, <span class="string">"r"</span>]<span class="string">.copyWithin</span><span class="params">(0)</span><span class="string">//</span>此时数组不变</span><br><span class="line">[<span class="string">"w"</span>, <span class="string">"i"</span>, <span class="string">"r"</span>]<span class="string">.copyWithin</span><span class="params">(1)</span><span class="string">//</span>[<span class="string">"w"</span>, <span class="string">"w"</span>, <span class="string">"i"</span>],数组从位置1开始被原数组覆盖，只有1之前的项0保持不变</span><br><span class="line">[<span class="string">"w"</span>, <span class="string">"i"</span>, <span class="string">"r"</span>,<span class="string">"b"</span>]<span class="string">.copyWithin</span><span class="params">(1,2)</span><span class="string">//</span>[<span class="string">"w"</span>, <span class="string">"r"</span>, <span class="string">"b"</span>, <span class="string">"b"</span>],索引2到最后的r,b两项分别替换到原数组1开始的各项，当数量不够，变终止</span><br><span class="line">[<span class="string">"w"</span>, <span class="string">"i"</span>, <span class="string">"r"</span>,'b']<span class="string">.copyWithin</span><span class="params">(1,2,3)</span><span class="string">//</span>[<span class="string">"w"</span>, <span class="string">"r"</span>, <span class="string">"r"</span>, <span class="string">"b"</span>]，强第1项的i替换为第2项的r</span><br></pre></td></tr></table></figure></p>
+<p>copyWithin方法接收三个参数，被替换数据的开始处、替换块的开始处、替换块的结束处(不包括);copyWithin(s,m,n).</p>
+<p><strong><em> Array.from() :</em></strong><br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Array.from(&#123;<span class="string">'0'</span>:<span class="string">'w'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,length:<span class="number">2</span>&#125;)<span class="regexp">//</span>[<span class="string">"w"</span>, <span class="string">"b"</span>],返回数组的长度取决于对象中的length，故此项必须有！</span><br><span class="line">Array.from(&#123;<span class="string">'0'</span>:<span class="string">'w'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,length:<span class="number">4</span>&#125;)<span class="regexp">//</span>[<span class="string">"w"</span>, <span class="string">"b"</span>, undefined, undefined],数组后<span class="number">2</span>项没有属性去赋值，故undefined</span><br><span class="line">Array.from(&#123;<span class="string">'0'</span>:<span class="string">'w'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,length:<span class="number">1</span>&#125;)<span class="regexp">//</span>[<span class="string">"w"</span>],length小于key的数目，按序添加数组</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span><span class="regexp">//</span></span><br><span class="line">let divs=document.getElementsByTagName(<span class="string">'div'</span>);</span><br><span class="line">Array.from(divs)<span class="regexp">//</span>返回div元素数组</span><br><span class="line">Array.from(<span class="string">'wbiokr'</span>)<span class="regexp">//</span>[<span class="string">"w"</span>, <span class="string">"b"</span>, <span class="string">"i"</span>, <span class="string">"o"</span>, <span class="string">"k"</span>, <span class="string">"r"</span>]</span><br><span class="line">Array.from([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="keyword">function</span>(x)&#123;</span><br><span class="line">        return x+<span class="number">1</span>&#125;)<span class="regexp">//</span>[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],第二个参数为回调函数</span><br></pre></td></tr></table></figure></p>
+<p>Array.from可以把带有lenght属性类似数组的对象转换为数组，也可以把字符串等可以遍历的对象转换为数组，它接收2个参数，转换对象与回调函数</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Array/" rel="tag"># Array</a>
+          
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CommonJS规范/" rel="next" title="CommonJS规范">
+                <i class="fa fa-chevron-left"></i> CommonJS规范
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ES6-Modules/" rel="prev" title="ES6 Modules">
+                ES6 Modules <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">lyw</p>
+              <p class="site-description motion-element" itemprop="description">前端开发</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lyw</span>
+
+  
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+ -->
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
