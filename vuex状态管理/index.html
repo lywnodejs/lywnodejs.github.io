@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue中的路由懒加载 | 小小世界</title>
+  <title>vuex状态管理(一) | 小小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="##懒加载：       也叫延迟加载，即在需要的时候进行加载，随用随载。 为什么需要懒加载？　　　　像vue这种单页面应用，如果没有应用懒加载，运用webpack打包后的文件将会异常的大，造成进入首页时，需要加载的内容过多，时间过长，会出啊先长时间的白屏，即使做了loading也是不利于用户体验，而运用懒加载则可以将页面进行划分，需要的时候加载页面，可以有效的分担首页所承担的加载压力，减少首页加">
-<meta name="keywords" content="vue">
+  <meta name="description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
+<meta name="keywords" content="vue,vuex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue中的路由懒加载">
-<meta property="og:url" content="writebugs.cn/vue的路由懒加载/index.html">
+<meta property="og:title" content="vuex状态管理(一)">
+<meta property="og:url" content="writebugs.cn/vuex状态管理/index.html">
 <meta property="og:site_name" content="小小世界">
-<meta property="og:description" content="##懒加载：       也叫延迟加载，即在需要的时候进行加载，随用随载。 为什么需要懒加载？　　　　像vue这种单页面应用，如果没有应用懒加载，运用webpack打包后的文件将会异常的大，造成进入首页时，需要加载的内容过多，时间过长，会出啊先长时间的白屏，即使做了loading也是不利于用户体验，而运用懒加载则可以将页面进行划分，需要的时候加载页面，可以有效的分担首页所承担的加载压力，减少首页加">
+<meta property="og:description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-26T04:45:24.482Z">
+<meta property="og:updated_time" content="2018-05-28T09:44:28.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue中的路由懒加载">
-<meta name="twitter:description" content="##懒加载：       也叫延迟加载，即在需要的时候进行加载，随用随载。 为什么需要懒加载？　　　　像vue这种单页面应用，如果没有应用懒加载，运用webpack打包后的文件将会异常的大，造成进入首页时，需要加载的内容过多，时间过长，会出啊先长时间的白屏，即使做了loading也是不利于用户体验，而运用懒加载则可以将页面进行划分，需要的时候加载页面，可以有效的分担首页所承担的加载压力，减少首页加">
+<meta name="twitter:title" content="vuex状态管理(一)">
+<meta name="twitter:description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
   
   
     <link rel="icon" href="images/logo.png">
@@ -108,14 +108,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-vue的路由懒加载" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-vuex状态管理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      vue中的路由懒加载
+      vuex状态管理(一)
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -123,12 +123,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/vue/">vue</a>
+                      <a href="/categories/vuex/">vuex</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-03-15
+          <i class="fa fa-calendar"></i>  2017-05-30
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,15 +144,23 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>##<br>懒加载：<br>       也叫延迟加载，即在需要的时候进行加载，随用随载。</p>
-<p>为什么需要懒加载？<br>　　　　像vue这种单页面应用，如果没有应用懒加载，运用webpack打包后的文件将会异常的大，造成进入首页时，需要加载的内容过多，时间过长，会出啊先长时间的白屏，即使做了loading也是不利于用户体验，而运用懒加载则可以将页面进行划分，需要的时候加载页面，可以有效的分担首页所承担的加载压力，减少首页加载用时</p>
-<p>　　　　简单的说就是：进入首页不用一次加载过多资源造成用时过长！！！</p>
-<p>如何实现？</p>
-<h1 id="懒加载写法："><a href="#懒加载写法：" class="headerlink" title="懒加载写法："></a>懒加载写法：</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'login'</span>,</span><br><span class="line">      component:<span class="function"><span class="params">resolve</span>=&gt;</span><span class="built_in">require</span>([<span class="string">"@/components/login"</span>],resolve)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/list'</span>,</span><br><span class="line">      component:<span class="function"><span class="params">resolve</span>=&gt;</span><span class="built_in">require</span>([<span class="string">"@/components/list/list"</span>],resolve),</span><br><span class="line">      children:[</span><br><span class="line">        &#123;</span><br><span class="line">          path: <span class="string">'CuserManagement'</span>,</span><br><span class="line">          name:<span class="string">"C端用户管理"</span>,</span><br><span class="line">          component:<span class="function"><span class="params">resolve</span>=&gt;</span><span class="built_in">require</span>([<span class="string">"@/components/CuserManagement"</span>],resolve)       </span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path: <span class="string">'BuserManagement'</span>,</span><br><span class="line">          name:<span class="string">"B端用户管理"</span>,</span><br><span class="line">          component:<span class="function"><span class="params">resolve</span>=&gt;</span><span class="built_in">require</span>([<span class="string">"@/components/BuserManagement"</span>],resolve)</span><br><span class="line">        &#125;,</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+            <blockquote>
+<p>安装<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> vuex <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>然后 , 在 main.js 中加入 :<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">Vue.use(vuex);</span><br><span class="line"><span class="keyword">var</span> store = <span class="keyword">new</span> vuex.Store(&#123;<span class="comment">//store对象</span></span><br><span class="line">    state:&#123;</span><br><span class="line">        show:<span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>再然后 , 在实例化 Vue对象时加入 store 对象 :<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</span><br><span class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  store,<span class="comment">//使用store</span></span><br><span class="line">  <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span>,</span><br><span class="line">  <span class="attribute">components</span>: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>改变状态<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="keyword">log</span>(this.<span class="variable">$store</span>.<span class="keyword">state</span>.show)</span><br><span class="line">this.<span class="variable">$store</span>.<span class="keyword">state</span>.show=true;</span><br><span class="line">console.<span class="keyword">log</span>(this.<span class="variable">$store</span>.<span class="keyword">state</span>.show)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年05月26日 12:45</p>
-        <p>原始链接： <a class="post-url" href="/vue的路由懒加载/" title="vue中的路由懒加载">writebugs.cn/vue的路由懒加载/</a></p>
+        <p>最后更新： 2018年05月28日 17:44</p>
+        <p>原始链接： <a class="post-url" href="/vuex状态管理/" title="vuex状态管理(一)">writebugs.cn/vuex状态管理/</a></p>
         <footer>
             <a href="writebugs.cn">
                 <img src="/images/logo.png" alt="lyw">
@@ -209,7 +217,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/vue的路由懒加载/&title=《vue中的路由懒加载》 — 小小世界&pic=writebugs.cnimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/vuex状态管理/&title=《vuex状态管理(一)》 — 小小世界&pic=writebugs.cnimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -219,22 +227,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/vue的路由懒加载/&title=《vue中的路由懒加载》 — 小小世界&source=前端开发" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/vuex状态管理/&title=《vuex状态管理(一)》 — 小小世界&source=前端开发" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/vue的路由懒加载/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/vuex状态管理/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue中的路由懒加载》 — 小小世界&url=writebugs.cn/vue的路由懒加载/&via=writebugs.cn" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex状态管理(一)》 — 小小世界&url=writebugs.cn/vuex状态管理/&via=writebugs.cn" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/vue的路由懒加载/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/vuex状态管理/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -244,7 +252,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/vue的路由懒加载/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/vuex状态管理/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -258,6 +266,8 @@
       
     <a href="/tags/vue/" class="color4">vue</a>
       
+    <a href="/tags/vuex/" class="color5">vuex</a>
+      
   </li>
 
         </ul>
@@ -267,28 +277,22 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#懒加载写法："><span class="post-toc-text">懒加载写法：</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/Ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/webpack配置/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Ajax
+          webpack配置
         
       </span>
     </a>
   
   
-    <a href="/vue的router监听/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">vue中监听router变化</span>
+    <a href="/react初识/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">react初识</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
