@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="writebugs.cn/"/>
-  <updated>2018-05-30T02:53:05.708Z</updated>
+  <updated>2018-06-04T01:53:43.540Z</updated>
   <id>writebugs.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>elementUI</title>
+    <link href="writebugs.cn/element/"/>
+    <id>writebugs.cn/element/</id>
+    <published>2018-04-14T16:00:00.000Z</published>
+    <updated>2018-06-04T01:53:43.540Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>想要在ele表格中添加图片或非文字类，方法如下</p></blockquote><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column label=<span class="string">"Logo"</span> <span class="built_in">width</span>=<span class="string">"100"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">template</span> scope=<span class="string">"scope"</span>&gt;</span><br><span class="line">    &lt;img :src=<span class="string">"scope.row.Logo"</span> <span class="built_in">width</span>=<span class="string">"40"</span> <span class="built_in">height</span>=<span class="string">"40"</span> class=<span class="string">"Logo"</span>/&gt;</span><br><span class="line">    &lt;/<span class="keyword">template</span>&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure><blockquote><p>其中Logo是你自己的定义参数</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;想要在ele表格中添加图片或非文字类，方法如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight arduino&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
+      
+    
+    </summary>
+    
+      <category term="前端UI" scheme="writebugs.cn/categories/%E5%89%8D%E7%AB%AFUI/"/>
+    
+    
+      <category term="elementUI" scheme="writebugs.cn/tags/elementUI/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack配置</title>
