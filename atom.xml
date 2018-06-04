@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="writebugs.cn/"/>
-  <updated>2018-06-04T01:53:43.540Z</updated>
+  <updated>2018-06-04T01:54:48.139Z</updated>
   <id>writebugs.cn/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>elementUI</title>
     <link href="writebugs.cn/element/"/>
     <id>writebugs.cn/element/</id>
-    <published>2018-04-14T16:00:00.000Z</published>
-    <updated>2018-06-04T01:53:43.540Z</updated>
+    <published>2018-06-03T16:00:00.000Z</published>
+    <updated>2018-06-04T01:54:48.139Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>想要在ele表格中添加图片或非文字类，方法如下</p></blockquote><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column label=<span class="string">"Logo"</span> <span class="built_in">width</span>=<span class="string">"100"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">template</span> scope=<span class="string">"scope"</span>&gt;</span><br><span class="line">    &lt;img :src=<span class="string">"scope.row.Logo"</span> <span class="built_in">width</span>=<span class="string">"40"</span> <span class="built_in">height</span>=<span class="string">"40"</span> class=<span class="string">"Logo"</span>/&gt;</span><br><span class="line">    &lt;/<span class="keyword">template</span>&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure><blockquote><p>其中Logo是你自己的定义参数</p></blockquote>]]></content>
     
@@ -287,9 +287,9 @@
       <category term="es6" scheme="writebugs.cn/categories/es6/"/>
     
     
-      <category term="es6" scheme="writebugs.cn/tags/es6/"/>
-    
       <category term="Array" scheme="writebugs.cn/tags/Array/"/>
+    
+      <category term="es6" scheme="writebugs.cn/tags/es6/"/>
     
   </entry>
   
