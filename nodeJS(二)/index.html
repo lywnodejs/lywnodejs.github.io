@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vuex状态管理(一) | 小小世界</title>
+  <title>node入门二 | 小小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
-<meta name="keywords" content="vue,vuex">
+  <meta name="description" content="express12345678910111213141516171819202122232425262728293031const express=require(&apos;express&apos;);const expressStatic=require(&apos;express-static&apos;);var server=express();server.listen(8080);//用户数据var users=&amp;#12">
+<meta name="keywords" content="node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vuex状态管理(一)">
-<meta property="og:url" content="writebugs.cn/vuex状态管理/index.html">
+<meta property="og:title" content="node入门二">
+<meta property="og:url" content="writebugs.cn/nodeJS(二)/index.html">
 <meta property="og:site_name" content="小小世界">
-<meta property="og:description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
+<meta property="og:description" content="express12345678910111213141516171819202122232425262728293031const express=require(&apos;express&apos;);const expressStatic=require(&apos;express-static&apos;);var server=express();server.listen(8080);//用户数据var users=&amp;#12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-30T02:52:41.848Z">
+<meta property="og:updated_time" content="2018-06-22T09:23:48.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vuex状态管理(一)">
-<meta name="twitter:description" content="安装1npm install vuex --save   然后 , 在 main.js 中加入 :1234567import vuex from &apos;vuex&apos;Vue.use(vuex);var store = new vuex.Store(&amp;#123;//store对象    state:&amp;#123;        show:false    &amp;#125;&amp;#125;)   再然后 , 在实例化">
+<meta name="twitter:title" content="node入门二">
+<meta name="twitter:description" content="express12345678910111213141516171819202122232425262728293031const express=require(&apos;express&apos;);const expressStatic=require(&apos;express-static&apos;);var server=express();server.listen(8080);//用户数据var users=&amp;#12">
   
   
     <link rel="icon" href="images/logo.png">
@@ -108,14 +108,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-vuex状态管理" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-nodeJS(二)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      vuex状态管理(一)
+      node入门二
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -123,12 +123,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/vuex/">vuex</a>
+                      <a href="/categories/前端后台开发/">前端后台开发</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-05-30
+          <i class="fa fa-calendar"></i>  2018-06-25
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,23 +144,13 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <blockquote>
-<p>安装<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> vuex <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>然后 , 在 main.js 中加入 :<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">Vue.use(vuex);</span><br><span class="line"><span class="keyword">var</span> store = <span class="keyword">new</span> vuex.Store(&#123;<span class="comment">//store对象</span></span><br><span class="line">    state:&#123;</span><br><span class="line">        show:<span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>再然后 , 在实例化 Vue对象时加入 store 对象 :<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</span><br><span class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  store,<span class="comment">//使用store</span></span><br><span class="line">  <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span>,</span><br><span class="line">  <span class="attribute">components</span>: &#123; App &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>改变状态<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="keyword">log</span>(this.<span class="variable">$store</span>.<span class="keyword">state</span>.show)</span><br><span class="line">this.<span class="variable">$store</span>.<span class="keyword">state</span>.show=true;</span><br><span class="line">console.<span class="keyword">log</span>(this.<span class="variable">$store</span>.<span class="keyword">state</span>.show)</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+            <h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express=<span class="keyword">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> expressStatic=<span class="keyword">require</span>(<span class="string">'express-static'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server=express();</span><br><span class="line">server.listen(<span class="number">8080</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用户数据</span></span><br><span class="line"><span class="keyword">var</span> users=&#123;</span><br><span class="line">  <span class="string">'blue'</span>: <span class="string">'123456'</span>,</span><br><span class="line">  <span class="string">'zhangsan'</span>: <span class="string">'654321'</span>,</span><br><span class="line">  <span class="string">'lisi'</span>: <span class="string">'987987'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">server.get(<span class="string">'/login'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> user=req.query[<span class="string">'user'</span>];</span><br><span class="line">  <span class="keyword">var</span> pass=req.query[<span class="string">'pass'</span>];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(users[user]==<span class="keyword">null</span>)&#123;</span><br><span class="line">    res.send(&#123;ok: <span class="keyword">false</span>, msg: <span class="string">'此用户不存在'</span>&#125;);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(users[user]!=pass)&#123;</span><br><span class="line">      res.send(&#123;ok: <span class="keyword">false</span>, msg: <span class="string">'密码错了'</span>&#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      res.send(&#123;ok: <span class="keyword">true</span>, msg: <span class="string">'成功'</span>&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="keyword">use</span>(expressStatic(<span class="string">'./www'</span>),<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</span><br><span class="line">  res.send(<span class="string">"ok"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="body-parser"><a href="#body-parser" class="headerlink" title="body-parser"></a>body-parser</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">const express=<span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line">const querystring=<span class="built_in">require</span>(<span class="string">'querystring'</span>);</span><br><span class="line">const bodyParser=<span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"></span><br><span class="line">var server=express();</span><br><span class="line">server.listen(<span class="number">8080</span>);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">server.use(<span class="function"><span class="keyword">function</span> <span class="params">(req, res, next)</span></span>&#123;</span><br><span class="line">  var str=<span class="string">''</span>;</span><br><span class="line">  req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(data)</span></span>&#123;</span><br><span class="line">    str+=data;</span><br><span class="line">  &#125;);</span><br><span class="line">  req.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    req.body=querystring.parse(str);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">next</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">server.use(bodyParser.urlencoded(&#123;&#125;));</span><br><span class="line"></span><br><span class="line">server.use(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span></span>&#123;</span><br><span class="line">  console.<span class="built_in">log</span>(req.body);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年05月30日 10:52</p>
-        <p>原始链接： <a class="post-url" href="/vuex状态管理/" title="vuex状态管理(一)">writebugs.cn/vuex状态管理/</a></p>
+        <p>最后更新： 2018年06月22日 17:23</p>
+        <p>原始链接： <a class="post-url" href="/nodeJS(二)/" title="node入门二">writebugs.cn/nodeJS(二)/</a></p>
         <footer>
             <a href="writebugs.cn">
                 <img src="/images/logo.png" alt="lyw">
@@ -217,7 +207,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/vuex状态管理/&title=《vuex状态管理(一)》 — 小小世界&pic=images/vue.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/nodeJS(二)/&title=《node入门二》 — 小小世界&pic=writebugs.cnimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -227,22 +217,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/vuex状态管理/&title=《vuex状态管理(一)》 — 小小世界&source=前端开发" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/nodeJS(二)/&title=《node入门二》 — 小小世界&source=前端开发" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/vuex状态管理/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/nodeJS(二)/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex状态管理(一)》 — 小小世界&url=writebugs.cn/vuex状态管理/&via=writebugs.cn" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《node入门二》 — 小小世界&url=writebugs.cn/nodeJS(二)/&via=writebugs.cn" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/vuex状态管理/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/nodeJS(二)/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -252,7 +242,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/vuex状态管理/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/nodeJS(二)/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -264,9 +254,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/vue/" class="color4">vue</a>
-      
-    <a href="/tags/vuex/" class="color5">vuex</a>
+    <a href="/tags/node/" class="color5">node</a>
       
   </li>
 
@@ -277,22 +265,18 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#express"><span class="post-toc-text">express</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#body-parser"><span class="post-toc-text">body-parser</span></a></li></ol>
+        </nav>
+    </aside>
+    
 
 <nav id="article-nav">
   
-    <a href="/vue全局使用第三方插件/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          vue安装第三方插件
-        
-      </span>
-    </a>
   
-  
-    <a href="/react初识/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">react初识</span>
+    <a href="/nodeJS(一)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">node入门一</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
