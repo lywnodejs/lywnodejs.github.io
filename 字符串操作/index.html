@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>string | 小小世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="description" content="length 获取字符串长度12var str = &quot;hello world&quot;;alert(str.length);  索引 通过下标获取字符串指定位置的字符，但是不能改变该索引对应的值12var str = &quot;hello world&quot;str[0] = &quot;H&quot;;//不会影响str,但也不会报错  toUpperCase 将字符串全部转为大写，并返回原字符串不变12var str = &quot;hello">
+<meta name="keywords" content="string">
+<meta property="og:type" content="article">
+<meta property="og:title" content="string">
+<meta property="og:url" content="writebugs.cn/字符串操作/index.html">
+<meta property="og:site_name" content="小小世界">
+<meta property="og:description" content="length 获取字符串长度12var str = &quot;hello world&quot;;alert(str.length);  索引 通过下标获取字符串指定位置的字符，但是不能改变该索引对应的值12var str = &quot;hello world&quot;str[0] = &quot;H&quot;;//不会影响str,但也不会报错  toUpperCase 将字符串全部转为大写，并返回原字符串不变12var str = &quot;hello">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-25T02:40:38.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="string">
+<meta name="twitter:description" content="length 获取字符串长度12var str = &quot;hello world&quot;;alert(str.length);  索引 通过下标获取字符串指定位置的字符，但是不能改变该索引对应的值12var str = &quot;hello world&quot;str[0] = &quot;H&quot;;//不会影响str,但也不会报错  toUpperCase 将字符串全部转为大写，并返回原字符串不变12var str = &quot;hello">
+  
+  
+    <link rel="icon" href="images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">小小世界</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        小小世界
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        web前端开发
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="小小世界" target="_blank" href="//writebugs.cn">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/lywnodejs">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a   ">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a   ">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      string
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端开发/">前端开发</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-10-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="length"><a href="#length" class="headerlink" title="length"></a>length</h1><blockquote>
+<p>获取字符串长度<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"hello world"</span><span class="comment">;</span></span><br><span class="line">alert(str.length)<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><blockquote>
+<p>通过下标获取字符串指定位置的字符，但是不能改变该索引对应的值<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">str</span> = <span class="string">"hello world"</span></span><br><span class="line"><span class="keyword">str</span>[<span class="number">0</span>] = <span class="string">"H"</span>;<span class="comment">//不会影响str,但也不会报错</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase"></a>toUpperCase</h1><blockquote>
+<p>将字符串全部转为大写，并返回原字符串不变<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var <span class="built_in">str</span> = <span class="string">"hello world"</span>;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.toUpperCase());</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase"></a>toLowerCase</h1><blockquote>
+<p>将字符串全部变小写，并返回原字符串不变<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"hello world"</span><span class="comment">;</span></span><br><span class="line">alert(<span class="name">str</span>.toLowerCase())<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h1><blockquote>
+<p>搜索指定字符串出现的位置，接收两个参数，第一个参数表示要查找的元素，第二个参数表示要查找的位置，若找到则返回对应元素所在的位置，否则返回-1<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello world!'</span>;</span><br><span class="line">alert(s.indexOf(<span class="string">'World'</span>));<span class="comment">//返回-1</span></span><br><span class="line">alert(s.indexOf(<span class="string">'o'</span>));<span class="comment">//返回4</span></span><br><span class="line">alert(s.indexOf(<span class="string">'o'</span>,<span class="number">6</span>));<span class="comment">//从第六位开始查找，返回7</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><blockquote>
+<p>将一个或多个字符串拼接起来，返回拼接到的新的字符串，原字符串不变<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1 = <span class="string">"hello "</span>;</span><br><span class="line"><span class="keyword">var</span> res = str1.concat(<span class="string">" world"</span>,<span class="string">"!"</span>);</span><br><span class="line">alert(res);<span class="comment">//返回hello world！</span></span><br><span class="line">alert(str1);<span class="comment">//返回hello</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><blockquote>
+<p>返回被操作字符的子字符串，原字符串不变，接受两个参数，字符串的起始位置和结束位置，返回的字符串不包含结束位置的字符，第一个参数要小于第二个参数，否则返回””,若只有一个参数，返回起始位置到字符串结尾的所有字符串，若传递的参数为负数，将传入的负值与字符创的长度相加<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"hello world!"</span><span class="comment">;</span></span><br><span class="line">alert(<span class="name">str</span>.slice(<span class="number">3</span>,<span class="number">7</span>))<span class="comment">;//返回lo w</span></span><br><span class="line">alert(<span class="name">str</span>.slice(<span class="number">3</span>))<span class="comment">;//返回lo world!</span></span><br><span class="line">alert(<span class="name">str</span>.slice(<span class="number">9</span>,<span class="number">5</span>))<span class="comment">;//返回""</span></span><br><span class="line">alert(<span class="name">str</span>.slice(<span class="name">-7</span>,<span class="number">-3</span>))<span class="comment">;//负数与长度相加，即str.slice(5,9)返回 wor</span></span><br><span class="line">alert(<span class="name">str</span>.slice(<span class="number">5</span>,<span class="number">9</span>))<span class="comment">;//返回 wor</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="substring"><a href="#substring" class="headerlink" title="substring"></a>substring</h1><blockquote>
+<p>当传入的参数是正数时，substring与slice的功能基本相同，唯一的区别是当第一个参数大于第二个参数时，方法将第二个参数作为截取的起始位置而将第一个参数作为截取结束的位置，且截取的字符串不包含第一个参数位置对应的值，当传入的参数是负值时，该方法会将所有的负值转化为0<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"hello world!"</span><span class="comment">;</span></span><br><span class="line">alert(<span class="name">str</span>.substring(<span class="number">3</span>,<span class="number">7</span>))<span class="comment">;//返回lo w</span></span><br><span class="line">alert(<span class="name">str</span>.substring(<span class="number">3</span>))<span class="comment">;//返回lo world!</span></span><br><span class="line">alert(<span class="name">str</span>.substring(<span class="number">9</span>,<span class="number">5</span>))<span class="comment">;//返回 wor,即str.substring(5,9),不包含第九项</span></span><br><span class="line">alert(<span class="name">str</span>.substring(<span class="name">-7</span>,<span class="number">-3</span>))<span class="comment">;//负数与长度相加，即str.substring(0,0)返回""</span></span><br><span class="line">alert(<span class="name">str</span>.substring(<span class="name">-7</span>,<span class="number">3</span>))<span class="comment">;//负数与长度相加，即str.substring(0,3)返回hel</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="substr"><a href="#substr" class="headerlink" title="substr"></a>substr</h1><blockquote>
+<p>返回指定位置开始的指定长度的字符串，原字符串不变，若第二个参数缺省就一直截取到字符串结束，当传递的参数为负值时，方法会将负的第一个参数与字符串的长度相加，将负的第二个参数转化为0<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var s = 'hello world!'</span><br><span class="line">alert(s.substr(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">//从索引0开始，截取5个字符串，返回hello</span></span><br><span class="line">alert(s.substr(<span class="number">7</span>)); <span class="comment">//从索引7开始截取，一直到结束，返回orld!</span></span><br><span class="line">alert(s.substr(<span class="number">-7</span>,<span class="number">3</span>));<span class="comment">//负数与长度相加，即str.substr(5,3),返回 wo</span></span><br><span class="line">alert(s.substr(<span class="number">-7</span>,<span class="number">-3</span>));<span class="comment">//负数与长度相加，即str.substr(5,0),返回""</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="split"><a href="#split" class="headerlink" title="split"></a>split</h1><blockquote>
+<p>基于指定的分隔符将一个字符串分割成多个字符串，并将结果存放在一个数组中，可以传两个参数，第一个参数为分隔符，第二个参数用于指定返回数组的大小，若省略该参数，则返回整个数组<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> s = <span class="string">"1,23,45"</span>;</span><br><span class="line"><span class="built_in">var</span> arr1 = s.<span class="built_in">split</span>(<span class="string">","</span>);</span><br><span class="line">alert(arr1);//返回数组[<span class="string">"1"</span>,<span class="string">"23"</span>,<span class="string">"45"</span>]</span><br><span class="line"><span class="built_in">var</span> arr2 = s.<span class="built_in">split</span>(<span class="string">","</span>,<span class="number">2</span>);</span><br><span class="line">alert(arr2);//返回数组[<span class="string">"1"</span>,<span class="string">"23"</span>]</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="trim"><a href="#trim" class="headerlink" title="trim"></a>trim</h1><blockquote>
+<p>删除元素前置及后缀的所有空格，然后返回结果，原数组不变<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str<span class="number">1</span> = <span class="string">"      hello world   "</span>;</span><br><span class="line">var str<span class="number">2</span> = str<span class="number">1.</span>trim<span class="comment">()</span>;</span><br><span class="line">alert<span class="comment">(str1)</span>;<span class="comment">//返回"      hello world   "</span></span><br><span class="line">alert<span class="comment">(str2)</span>;<span class="comment">//返回"hello world"</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年06月25日 10:40</p>
+        <p>原始链接： <a class="post-url" href="/字符串操作/" title="string">writebugs.cn/字符串操作/</a></p>
+        <footer>
+            <a href="writebugs.cn">
+                <img src="/images/logo.png" alt="lyw">
+                lyw
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/字符串操作/&title=《string》 — 小小世界&pic=images/js.JPEG" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/字符串操作/&title=《string》 — 小小世界&source=前端开发" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/字符串操作/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《string》 — 小小世界&url=writebugs.cn/字符串操作/&via=writebugs.cn" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/字符串操作/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/字符串操作/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/string/" class="color2">string</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#length"><span class="post-toc-text">length</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#索引"><span class="post-toc-text">索引</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#toUpperCase"><span class="post-toc-text">toUpperCase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#toLowerCase"><span class="post-toc-text">toLowerCase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#indexOf"><span class="post-toc-text">indexOf</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#concat"><span class="post-toc-text">concat</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#slice"><span class="post-toc-text">slice</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#substring"><span class="post-toc-text">substring</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#substr"><span class="post-toc-text">substr</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#split"><span class="post-toc-text">split</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#trim"><span class="post-toc-text">trim</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/数组操作/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Array
+        
+      </span>
+    </a>
+  
+  
+    <a href="/vue全局使用第三方插件/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">vue安装第三方插件</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 lyw<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "writebugs.cn",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Class/">Class</a><a class="category-link" href="/categories/es6/">es6</a><a class="category-link" href="/categories/react/">react</a><a class="category-link" href="/categories/vue/">vue</a><a class="category-link" href="/categories/vuex/">vuex</a><a class="category-link" href="/categories/前端UI/">前端UI</a><a class="category-link" href="/categories/前端后台开发/">前端后台开发</a><a class="category-link" href="/categories/前端开发/">前端开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/CommonJS/" style="font-size: 10px;">CommonJS</a> <a href="/tags/Modules/" style="font-size: 10px;">Modules</a> <a href="/tags/attr/" style="font-size: 10px;">attr</a> <a href="/tags/elementUI/" style="font-size: 10px;">elementUI</a> <a href="/tags/es6/" style="font-size: 16.67px;">es6</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/prop/" style="font-size: 10px;">prop</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/前端模块化开发/" style="font-size: 10px;">前端模块化开发</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/CommonJS/" style="font-size: 10px;">CommonJS</a> <a href="/tags/Modules/" style="font-size: 10px;">Modules</a> <a href="/tags/attr/" style="font-size: 10px;">attr</a> <a href="/tags/elementUI/" style="font-size: 10px;">elementUI</a> <a href="/tags/es6/" style="font-size: 16.67px;">es6</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/prop/" style="font-size: 10px;">prop</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/前端模块化开发/" style="font-size: 10px;">前端模块化开发</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

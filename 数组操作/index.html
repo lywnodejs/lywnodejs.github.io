@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Array | 小小世界</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="description" content="POP 删除最后一项,并返回删除元素的值；如果数组为空则返回undefine1234var a = [1,2,3,4,5];a.pop();//a：[1, 2, 3, 4]a.pop();//a：[1, 2, 3]a.pop();//a：[1, 2]  shift 删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefine123var a = [1,2,3,4,5]; a.shift">
+<meta name="keywords" content="Array">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Array">
+<meta property="og:url" content="writebugs.cn/数组操作/index.html">
+<meta property="og:site_name" content="小小世界">
+<meta property="og:description" content="POP 删除最后一项,并返回删除元素的值；如果数组为空则返回undefine1234var a = [1,2,3,4,5];a.pop();//a：[1, 2, 3, 4]a.pop();//a：[1, 2, 3]a.pop();//a：[1, 2]  shift 删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefine123var a = [1,2,3,4,5]; a.shift">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-25T02:53:55.122Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Array">
+<meta name="twitter:description" content="POP 删除最后一项,并返回删除元素的值；如果数组为空则返回undefine1234var a = [1,2,3,4,5];a.pop();//a：[1, 2, 3, 4]a.pop();//a：[1, 2, 3]a.pop();//a：[1, 2]  shift 删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefine123var a = [1,2,3,4,5]; a.shift">
+  
+  
+    <link rel="icon" href="images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">小小世界</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        小小世界
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        web前端开发
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="小小世界" target="_blank" href="//writebugs.cn">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/lywnodejs">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a   ">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a   ">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-数组操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Array
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端开发/">前端开发</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-10-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="POP"><a href="#POP" class="headerlink" title="POP"></a>POP</h1><blockquote>
+<p>删除最后一项,并返回删除元素的值；如果数组为空则返回undefine<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">a.pop();<span class="comment">//a：[1, 2, 3, 4]</span></span><br><span class="line">a.pop();<span class="comment">//a：[1, 2, 3]</span></span><br><span class="line">a.pop();<span class="comment">//a：[1, 2]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h1><blockquote>
+<p>删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefine<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.shift(); <span class="comment">//a：[2,3,4,5]</span></span><br><span class="line">a.shift(); <span class="comment">//a：[3, 4, 5]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="push"><a href="#push" class="headerlink" title="push"></a>push</h1><blockquote>
+<p>增加到最后,并返回新数组长度<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.push(<span class="number">6</span>);<span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">aa.push('xx');<span class="comment">//[1, 2, 3, 4, 5, 6, "xx"] 返回长度7</span></span><br><span class="line">a.push('yy');<span class="comment">//[1, 2, 3, 4, 5, 6, "xx", "yy"] 返回长度8</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a>unshift</h1><blockquote>
+<p>增加到最前,并返回新数组长度<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.unshift();<span class="comment">//[1, 2, 3, 4, 5]</span></span><br><span class="line">a.unshift(<span class="string">"cc"</span>);<span class="comment">//["cc", 1, 2, 3, 4, 5] 返回长度6</span></span><br><span class="line">a.unshift(<span class="string">"aaa"</span>);<span class="comment">//["aaa", "cc", 1, 2, 3, 4, 5] 返回长度7</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h1><blockquote>
+<p>数组翻转,并返回翻转后的原数组，原数组翻转了<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.reverse()<span class="comment">//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><blockquote>
+<p>数组转成字符串,并返回字符串，原数组木变<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">var b=a.join('||');<span class="comment">//b:"1||2||3||4||5" a:[1,2,3,4,5]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h1><blockquote>
+<p>数组元素索引,并返回元素索引，不存在返回-1,索引从0开始<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">a</span> = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line"><span class="keyword">a</span>.indexOf(<span class="string">'a'</span>)<span class="comment">;//0</span></span><br><span class="line"><span class="keyword">a</span>.indexOf(<span class="keyword">a</span>)<span class="comment">;//-1</span></span><br><span class="line"><span class="keyword">a</span>.indexOf(<span class="string">'f'</span>)<span class="comment">;//-1</span></span><br><span class="line"><span class="keyword">a</span>.indexOf(<span class="string">'e'</span>)<span class="comment">;//4</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><blockquote>
+<p>截取(切片)数组 得到截取的数组,返回从原数组中指定开始索引(包含)到结束索引(不包含)之间的项组成的新数组,原数组木变 ，索引从0开始<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.slice(<span class="number">1</span>,<span class="number">3</span>);//[<span class="string">"b"</span>, <span class="string">"c"</span>] a:[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br><span class="line">a.slice(<span class="number">0</span>,<span class="number">4</span>);//[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]</span><br><span class="line">a.slice(<span class="number">3</span>,<span class="number">4</span>);//[<span class="string">"d"</span>]</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h1><blockquote>
+<p>剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*参数是2个*/</span></span><br><span class="line">//第一参数是索引（从<span class="number">0</span>开始），第二是长度</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);//[<span class="string">"a"</span>, <span class="string">"b"</span>] a:[<span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>]</span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);//[<span class="string">"c"</span>, <span class="string">"d"</span>] a:[<span class="string">"e"</span>]</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>);//[<span class="string">"a"</span>] a:[<span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>] 同shift前删除</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br><span class="line">a.splice(a.length<span class="number">-1</span>,<span class="number">1</span>)l//[<span class="string">"e"</span>] a:[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>] 同pop前删除</span><br><span class="line"><span class="comment">/*参数大于2个*/</span></span><br><span class="line">//splice(start,deleteCount,val1,val2,...)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,... </span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">3</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">21</span>,<span class="number">238</span>,<span class="number">99</span>);//[<span class="string">"d"</span>] a:[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="number">10</span>, <span class="number">21</span>, <span class="number">238</span>, <span class="number">99</span>, <span class="string">"e"</span>]</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">100000000</span>,<span class="number">88</span>)//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>, <span class="number">88</span>] 同push后增加</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">0</span>,<span class="number">88</span>)//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>, <span class="number">88</span>] 同push后增加</span><br><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>];</span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">88</span>,<span class="number">99</span>)//返回 [] 从第一个元素，截取长度<span class="number">0</span>个 肯定是空 a:[<span class="number">88</span>, <span class="number">99</span>, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>] 同unshift前增加</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><blockquote>
+<p>数组合并,返回合并后的新数组,原数组木变<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.concat([<span class="number">88</span>,<span class="number">99</span>]);//[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>, <span class="number">88</span>, <span class="number">99</span>] a:[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>]</span><br><span class="line">var b= [<span class="number">9999</span>,<span class="number">10000</span>]</span><br><span class="line">a.concat(b);// [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>, <span class="number">9999</span>, <span class="number">10000</span>] a:[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>, <span class="string">"e"</span>]</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年06月25日 10:53</p>
+        <p>原始链接： <a class="post-url" href="/数组操作/" title="Array">writebugs.cn/数组操作/</a></p>
+        <footer>
+            <a href="writebugs.cn">
+                <img src="/images/logo.png" alt="lyw">
+                lyw
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=writebugs.cn/数组操作/&title=《Array》 — 小小世界&pic=images/js.JPEG" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=writebugs.cn/数组操作/&title=《Array》 — 小小世界&source=前端开发" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=writebugs.cn/数组操作/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Array》 — 小小世界&url=writebugs.cn/数组操作/&via=writebugs.cn" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=writebugs.cn/数组操作/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=writebugs.cn/数组操作/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Array/" class="color1">Array</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#POP"><span class="post-toc-text">POP</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#shift"><span class="post-toc-text">shift</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#push"><span class="post-toc-text">push</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#unshift"><span class="post-toc-text">unshift</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#reverse"><span class="post-toc-text">reverse</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#join"><span class="post-toc-text">join</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#indexOf"><span class="post-toc-text">indexOf</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#slice"><span class="post-toc-text">slice</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#splice"><span class="post-toc-text">splice</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#concat"><span class="post-toc-text">concat</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/webpack配置/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          webpack配置
+        
+      </span>
+    </a>
+  
+  
+    <a href="/字符串操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">string</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 lyw<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "writebugs.cn",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Class/">Class</a><a class="category-link" href="/categories/es6/">es6</a><a class="category-link" href="/categories/react/">react</a><a class="category-link" href="/categories/vue/">vue</a><a class="category-link" href="/categories/vuex/">vuex</a><a class="category-link" href="/categories/前端UI/">前端UI</a><a class="category-link" href="/categories/前端后台开发/">前端后台开发</a><a class="category-link" href="/categories/前端开发/">前端开发</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/CommonJS/" style="font-size: 10px;">CommonJS</a> <a href="/tags/Modules/" style="font-size: 10px;">Modules</a> <a href="/tags/attr/" style="font-size: 10px;">attr</a> <a href="/tags/elementUI/" style="font-size: 10px;">elementUI</a> <a href="/tags/es6/" style="font-size: 16.67px;">es6</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/prop/" style="font-size: 10px;">prop</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/前端模块化开发/" style="font-size: 10px;">前端模块化开发</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/CommonJS/" style="font-size: 10px;">CommonJS</a> <a href="/tags/Modules/" style="font-size: 10px;">Modules</a> <a href="/tags/attr/" style="font-size: 10px;">attr</a> <a href="/tags/elementUI/" style="font-size: 10px;">elementUI</a> <a href="/tags/es6/" style="font-size: 16.67px;">es6</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/prop/" style="font-size: 10px;">prop</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/router/" style="font-size: 10px;">router</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/前端模块化开发/" style="font-size: 10px;">前端模块化开发</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

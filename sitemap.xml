@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>writebugs.cn/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2018-06-25T02:53:55.122Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>writebugs.cn/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2018-06-25T02:40:38.702Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>writebugs.cn/nodeJS(%E4%BA%8C)/</loc>
     
-    <lastmod>2018-06-22T09:23:48.174Z</lastmod>
+    <lastmod>2018-06-25T02:18:41.301Z</lastmod>
     
   </url>
   
   <url>
     <loc>writebugs.cn/nodeJS(%E4%B8%80)/</loc>
     
-    <lastmod>2018-06-22T08:56:52.816Z</lastmod>
+    <lastmod>2018-06-25T02:18:30.459Z</lastmod>
     
   </url>
   
